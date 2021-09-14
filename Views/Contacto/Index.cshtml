@@ -1,3 +1,66 @@
 @{
     ViewData["Title"] = "Contacto";
+    Layout = "_Layout2";
 }
+
+<div class="row justify-content-center">
+
+    <form asp-controller="Contacto" asp-action="Crear">
+
+        <div class="form-group row">
+            <label class="form-label">Nombre</label>
+            <input class="form-control" type="text" name="Nombre" required>
+        </div>
+
+        <div class="form-group row">
+            <label class="form-label">Apellido paterno</label>
+            <input class="form-control" type="text" name="ApePat" required>
+        </div>
+
+        <div class="form-group row">
+            <label class="form-label">Apellido materno</label>
+            <input class="form-control" type="text" name="ApeMat" required>
+        </div>
+
+        <div class="form-group row">
+            <label class="form-label">Tipo de mascota</label>
+            <select class="form-control" name="Tipo" required>
+                <option value="">- Seleccione -</option>
+                <option value="Perro">Perro</option>
+                <option value="Gato">Gato</option>
+            </select>
+        </div>
+
+        <div class="form-group row">
+            <label class="form-label">Descripción del espacio</label>
+            <textarea class="form-control" name="Desc" required></textarea>
+        </div>
+
+        <div class="form-group row">
+            <label class="form-label">Teléfono</label>
+            <input class="form-control" type="number" name="Telf" required>
+        </div>
+
+        <div class="form-group row">
+            <label class="form-label">Distrito</label>
+            <select class="form-control" name="Distrito" required>
+                <option value="">- Seleccione -</option>
+                <option value="Distrito A">Distrito A</option>
+                <option value="Distrito B">Distrito B</option>
+                <option value="Distrito C">Distrito C</option>
+                <option value="Distrito D">Distrito D</option>
+            </select>
+        </div>
+
+        <div class="form-group row">
+            <label class="form-label">Dirección</label>
+            <input class="form-control" type="text" name="Dir" required>
+        </div>
+
+        <div class="form-group row">
+            <button class="btn btn-success">Enviar datos</button>
+        </div>
+
+    </form>
+
+</div>
